@@ -1,0 +1,31 @@
+
+server:
+  port: 8091
+app:
+  secret: bhagya  
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Ctel@12345
+    url: jdbc:mysql://10.10.13.72:3306/Bhagya_kuricheti
+    username: root
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: false
+  application:
+   name: Customer-Service
+eureka:
+ client:
+   register-with-eureka: true
+   fetch-registry: true
+   service-url:
+     defaultZone: http://localhost:8761/eureka/
+ instance:
+     hostname: localhost

@@ -1,0 +1,36 @@
+
+server:
+  port: 8092
+#app:
+#  secret: bhagya
+#  spring:
+#  xxx:
+#  autoconfigure:
+#    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Ctel@12345
+    url: jdbc:mysql://10.10.13.72:3306/Bhagya_kuricheti
+    username: root
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: false
+  application:
+   name: Product-Service
+eureka:
+ client:
+   register-with-eureka: true
+   fetch-registry: true
+   service-url:
+     defaultZone: http://localhost:8761/eureka/
+ instance:
+     hostname: localhost
