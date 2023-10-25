@@ -1,0 +1,13 @@
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+server:
+  port: 8761
+  
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Ctel@12345
+    url: jdbc:mysql://10.10.13.72:3306/Bhagya_kuricheti
+    username: root
